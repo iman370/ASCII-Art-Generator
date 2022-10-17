@@ -3,10 +3,11 @@ from PIL import Image
 
 # Turn this image into ASCII art
 img = 'amongus.png'
-imageX = 32
-imageY = 32
+imageX = 64
+imageY = 64
 
-ascii_alphabet = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. " #length: 70
+#ascii_alphabet = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'.                                 " #length: 70
+ascii_alphabet = " .:-=+*#%@"
 
 def loadImage(image, resizeX=imageX, resizeY=imageY):
     return np.array(Image.open(image).convert('L').resize((resizeX,resizeY)))
@@ -18,7 +19,7 @@ def showImage(image):
 
 def main():
     image = loadImage(img)
-    image = (image/255) * 70
+    image = (image/255) * (len(ascii_alphabet))
     #showImage(image)
     ascii_image = ""
     for i in range(imageX):
