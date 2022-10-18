@@ -11,11 +11,11 @@ ascii_alphabet = "@%#*+=-:. "
 # Turn this image into ASCII art
 def getImage():
     imageName = input("Please enter the image file name: ")
-
     return imageName
 
 def loadImage(image, resizeX=imageX, resizeY=imageY):
     return np.array(Image.open(image).convert('L').resize((resizeX,resizeY)))
+
 
 def showImage(image):
     from matplotlib import pyplot as plt
@@ -34,8 +34,6 @@ def main():
     #print(ascii_image)
     with open("ascii-art.txt", 'w') as f:
         f.write(ascii_image)
-
-    
 
 if __name__ == '__main__':
     main()
