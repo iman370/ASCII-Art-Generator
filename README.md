@@ -21,3 +21,6 @@ Run the program
 - You can preview the image by uncommenting showImage(image)
 
 The program will save your ascii art to ascii-art.txt
+
+
+imageX and imageY represent the length and width of the ascii art respectfully.
