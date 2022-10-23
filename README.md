@@ -14,9 +14,9 @@ Make sure you have python pillow (PIL) installed.
 
 Add your picture to the same folder as main.py
 
-Inside main.py, change image to '{image name}'
-
 Run the program
+
+Enter the name of the image that you want to convert (make sure to add the .png, .jpeg etc).
 
 - You can preview the image by uncommenting showImage(image)
 
